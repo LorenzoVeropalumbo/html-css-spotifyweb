@@ -9,6 +9,8 @@
 .app-container{
   width: 100%;
   height: 100vh;
+  min-height: 250px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Upper Banner */
@@ -19,9 +21,25 @@
   position: fixed;
   top: 0;
   right: 0;
-  height: 80px;
+  height: 90px;
   width: calc(100% - 200px);
+}
 
+/* Button */
+.btn-upgrade{
+  padding: 10px 35px;
+  border-radius: 20px;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.center-btn-upgrade{
+  text-align: right;
+  padding-top: 35px;
+  padding-right: 15px;
 }
 
 /* Main */
@@ -29,18 +47,22 @@ main{
   width: 100%;
   height: calc(100% - 100px);
   display: flex;
-  
 }
+
+/* Left Nav */
 .left-nav{
   background-color: black;
   color: white;
   width: 200px;
   overflow-y: hidden;
 }
+
+/* Main Content */
 .main-content{
   background-color: #141922;
   width: calc(100% - 200px);
   overflow-y: auto;
+  padding-top: 100px;
 }
 
 /* Footer */
