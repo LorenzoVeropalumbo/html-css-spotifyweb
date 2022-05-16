@@ -36,6 +36,9 @@
   font-size: 12px;
 }
 
+.btn-upgrade:hover{
+  background-color: red;
+}
 .center-btn-upgrade{
   text-align: right;
   padding-top: 35px;
