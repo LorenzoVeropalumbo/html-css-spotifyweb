@@ -5,6 +5,14 @@
    box-sizing: border-box;
 }
 
+image{
+  width: 100%;
+  display: block;
+}
+
+span{
+  color: inherit;
+}
 /* General */
 .app-container{
   width: 100%;
@@ -25,6 +33,21 @@
   width: calc(100% - 200px);
 }
 
+/* Flex */
+.flex-right-center{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 24px;
+}
+
+.flex-center{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  flex-direction: column;
+}
+
 /* Button */
 .btn-upgrade{
   padding: 10px 35px;
@@ -37,7 +60,7 @@
 }
 
 .btn-upgrade:hover{
-  background-color: red;
+  transform: scale(1.2);
 }
 .center-btn-upgrade{
   text-align: right;
@@ -59,7 +82,51 @@ main{
   width: 200px;
   overflow-y: hidden;
 }
+/* Left Nav Img */
+.left-nav img{
+  width: 30px;
+  margin-left: 10px;
+}
 
+.logo img{
+  width: 135px;
+}
+
+.logo-small img{
+  width: 30px;
+  display: none;
+}
+
+/* Left nav Menu */
+.nav-menu{
+  padding: 20px 0;
+}
+.nav-menu *{
+  vertical-align: middle;
+  padding-top: 5px;
+}
+
+.nav-menu span{
+  font-size: 13px;
+}
+
+.nav-menu-small{
+  display: none;
+}
+
+.nav-menu .active-obj{
+  border-left: 2px solid #a7f72d;
+  color: #dcdddc;
+}
+/* Playlist */
+.playlists{
+  margin-left: 10px;
+}
+.playlists h3{
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
 /* Main Content */
 .main-content{
   background-color: #141922;
