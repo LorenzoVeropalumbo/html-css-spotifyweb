@@ -10,7 +10,18 @@
   width: 100%;
   height: 100vh;
 }
+/* Upper Banner */
+.upper-banner{
+  background-color: rgba(9, 11, 17, 0.5);
+  color: white;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 80px;
+  width: calc(100% - 200px);
 
+}
 /* Main */
 main{
   width: 100%;
