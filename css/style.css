@@ -104,7 +104,6 @@ main{
 }
 
 .logo-small img{
-  width: 30px;
   display: none;
 }
 
@@ -129,6 +128,10 @@ main{
 .nav-menu .active-obj{
   border-left: 2px solid #a7f72d;
   color: #dcdddc;
+}
+
+.nav-menu .hover-active-obj:hover .color-gray{
+  color:white
 }
 
 /* Playlist */
@@ -178,20 +181,16 @@ main{
   z-index: 2;
   padding: 0 20px;
 }
+
+.account-small{
+  display: none;
+}
 .account img{
   margin-left: 0;
    
 }
 .account *{
   vertical-align: middle;
-}
-.download{
-  font-size: 12px;
-  display: inline-block;
-  color: #595959;
-}
-.download img{
-  width: 20px;
 }
 .account hr{
   border-top: none;
@@ -200,15 +199,19 @@ main{
   color: #6f6f6f;
 }
 
-.user{
-  background-color: #808080;
+.download{
+  font-size: 12px;
   display: inline-block;
-  border-radius: 20px;
-  overflow: hidden;
-  padding: 0 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  color: #595959;
 }
+.download:hover{
+  color: white;
+}
+.download img{
+  width: 20px;
+}
+
+
 /* Main Content */
 .main-content{
   background-color: #141922;
@@ -216,7 +219,6 @@ main{
   overflow-y: auto;
   padding-top: 100px;
 }
-
 
 /* Footer */
 footer{
@@ -227,17 +229,66 @@ footer{
   z-index: 50;
 }
 
+
+
 @media screen and (max-width:600px) {
   /* Calc width */
   .main-content{
     width: calc(100% - 50px);
   }
-
   .left-nav{
     width: 50px;
   }
-
   .upper-banner{
     width: calc(100% - 50px);
   }
+  /* Display None items */
+  .logo{
+    display: none;
+  }
+  .nav-menu{
+    display: none;
+  }
+  .account{
+    display: none;
+  }
+  .playlists{
+    display: none;
+  }
+  .logo-small img{
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  .left-nav img{
+    margin-left: 0;
+  }
+  .flex-center{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    justify-content: center;  
+  }
+  .nav-menu-small{
+    width: 100%;
+    display: block;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .account-small{
+    width: 100%;
+    height: calc(100vh - 270px);
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+}
+
+/* COLOR */
+.color-gray{
+  color: #5d5d5d;
 }
