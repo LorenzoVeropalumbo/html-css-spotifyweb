@@ -67,11 +67,6 @@ ul{
 .btn-upgrade:hover{
   transform: scale(1.2);
 }
-.center-btn-upgrade{
-  text-align: right;
-  padding-top: 35px;
-  padding-right: 15px;
-}
 
 /* MAIN */
 main{
@@ -164,6 +159,7 @@ main{
   width: 100%;
   position: relative;
   z-index: 1;
+  min-height: 70px;
 }
 .playlists *{
   vertical-align: middle;
