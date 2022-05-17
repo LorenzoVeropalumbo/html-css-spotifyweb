@@ -48,9 +48,9 @@
         <!-- End Nav Menu --> 
        
         <!-- Playlists -->
-        <div class="new-playlist">
-          <h3 class="title-playlist margin-left">Playlist</h3>
-          <span><span class="adding-icon margin-left">+</span> Crea Playlist</span>
+        <h3 class="title-playlist margin-left">Playlist</h3>
+        <div class="new-playlist">     
+          <span class="color-gray"><span class="adding-icon margin-left">+</span> Crea Playlist</span>
         </div>       
         <div class="playlists margin-left">        
           <ul class="playlist-list">
@@ -66,14 +66,17 @@
         <!-- Account -->
         <div class="account padding-left">
           <div class="download">
-            <img src="img/download.svg" alt="download-btn">
+            <img src="img/download.svg" alt="download-btn" class="img-mini">
             <span>Installa app</span>
           </div>
           <hr>
+          <div>
+            <img src="img/profile.svg" alt="download-btn" class="user">
+            <span>Jhon Doe</span>       
+          </div>
         </div>
 
         <!-- SMALL MENU -->
-
         <!-- Logo Small -->
         <div class="logo-small">
           <img src="img/logo-small.svg" alt="logo-small" class="img-small">        
@@ -91,22 +94,26 @@
           <div class="download">
             <img src="img/download.svg" alt="download-btn" class="img-mini">
           </div>
+          <div>
+            <img src="img/profile.svg" alt="download-btn" class="user">     
+          </div>
         </div>      
       </nav>
 
 
       <!-- Main Content -->
       <div class="main-content">
-       <div class="nav-main">
-         <ul class="">
-          <li>In evidenza</li>
-          <li>Podcast</li>
-          <li>classifiche</li>
-          <li>Generi e mood</li>
-          <li>Nuove uscite</li>
-          <li>Scopri</li>
-         </ul>
-       </div>
+        <div class="nav-main">
+          <ul class="flex-container ul-main">
+            <li class="custom-border">In evidenza</li>
+            <li>Podcast</li>
+            <li>classifiche</li>
+            <li>Generi e mood</li>
+            <li>Nuove uscite</li>
+            <li>Scopri</li>
+          </ul>
+        </div>
+
       </div>
     </main>
 

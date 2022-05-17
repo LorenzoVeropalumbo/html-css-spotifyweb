@@ -54,7 +54,7 @@ ul{
 }
 
 .flex-container{
-
+  display: flex;
 }
 
 .padding-left{
@@ -177,6 +177,15 @@ main{
   padding: 0 12px;
   margin-right: 5px;
 }
+
+/* Title and icon hover */
+.new-playlist:hover .adding-icon{
+  background-color: white;
+}
+.new-playlist:hover .color-gray{
+  color: white;
+}
+
 /* Plalist Items */
 .playlists{
   flex-grow: 3;
@@ -215,7 +224,7 @@ main{
 }
 .account hr{
   border-top: none;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;  
   margin-right: 20px;
   color: #6f6f6f;
@@ -228,8 +237,11 @@ main{
   color: #595959;
 }
 
+.download *{
+  vertical-align: top;
+}
+
 .download img{
-  width: 20px;
   filter: invert(0.4);
 }
 
@@ -241,7 +253,16 @@ main{
 .download:hover img{
   filter: invert(0);
 }
-
+/* user */
+.user{
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #808080;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
 
 /* Display None */
 .logo-small{
@@ -255,12 +276,45 @@ main{
 }
 /* END LEFT NAV */
 
+
 /* MAIN CONTENT */
 .main-content{
   background-color: #141922;
   width: calc(100% - 250px);
   overflow-y: auto;
-  padding-top: 100px;
+  padding-top: 80px;
+}
+
+/* UL main */
+.ul-main{
+  width: 60%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ul-main li{
+  text-transform: uppercase;
+  color: #696d71;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 20px 10px;
+}
+
+.ul-main li:hover{
+  color: white;
+}
+
+.custom-border {
+  position: relative;
+}
+
+.custom-border:after {
+  content: " ";
+  position: absolute;
+  border-bottom: 2px solid #a7f72d;
+  top: 70%;
+  right: 35%;
+  width: 30%;
 }
 
 /* FOOTER */
@@ -299,26 +353,32 @@ footer{
   .account{
     display: none;
   }
+  .title-playlist{
+    display: none;
+  }
   .playlists{
     display: none;
   }
   .new-playlist{
     display: none;
   }
-  /* Left Nav Changing */
+  /* Left Nav Small */
   .flex-center{
-    flex-direction: column;
-    flex-wrap: wrap;
     padding-top: 5px;
-    align-content: flex-start;
-    align-items: center;  
+    justify-content: end;
+    align-items: center;
   }
-
   .logo-small{
     display: block;
   }
   .nav-menu-small{
     display: block;
+    padding: 10px 10px;
+    flex-grow: 3;
+  }
+  .download{
+    padding-left: 5px;
+    padding-bottom: 10px;
   }
   .account-small{
     display: block;
