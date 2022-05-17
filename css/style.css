@@ -53,6 +53,18 @@ ul{
   flex-direction: column;
 }
 
+.flex-container{
+
+}
+
+.padding-left{
+  padding-left: 20px;
+}
+
+.margin-left{
+  margin-left: 20px;
+}
+
 /* Button */
 .btn-upgrade{
   padding: 10px 35px;
@@ -76,6 +88,7 @@ main{
 }
 
 /* LEFT NAV */
+
 .left-nav{
   background-color: black;
   color: white;
@@ -83,10 +96,19 @@ main{
   font-weight: 700;
 }
 
+
 /* NAV Img */
-.left-nav img{
+
+.img-small{
   width: 30px;
-  margin-left: 20px;
+}
+
+.logo{
+  width: 135px;
+}
+
+.img-mini{
+  width: 18px;
 }
 
 /* Logo */
@@ -94,14 +116,6 @@ main{
   width: 100%;
   position: relative;
   z-index: 3;
-  
-}
-.logo img{
-  width: 135px;
-}
-
-.logo-small img{
-  display: none;
 }
 
 /* NAV Menu */
@@ -118,11 +132,7 @@ main{
   font-size: 13px;
 }
 
-.nav-menu-small{
-  display: none;
-}
-
-/* IMG AND HOVER EFECT */
+/* NAV Menu Hover */
 .active-obj{
   border-left: 2px solid #a7f72d;
   color: #dcdddc;
@@ -152,25 +162,13 @@ main{
 }
 
 /* Playlist */
-.playlists{
-  margin-left: 20px;
-  flex-grow: 3;
-  overflow-y: auto;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  min-height: 70px;
-}
-.playlists *{
-  vertical-align: middle;
-}
-.playlists h3{
+.title-playlist{
   color: white;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
+  padding-bottom: 5px;
 }
-
-.playlists span{
+.adding-icon{
   color: #0c0c0c;
   text-transform: uppercase;
   font-size: 30px;
@@ -179,12 +177,25 @@ main{
   padding: 0 12px;
   margin-right: 5px;
 }
+/* Plalist Items */
+.playlists{
+  flex-grow: 3;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+  min-height: 70px;
+}
+.playlists *{
+  vertical-align: middle;
+}
 
 .playlists li{
   padding: 10px 0;
   color: #6f6f6f;
 }
 
+/* Playlist Hover */
 .playlists li:hover{
   color: white;
 }
@@ -197,23 +208,16 @@ main{
 .account{
   position: relative;
   z-index: 2;
-  padding: 0 20px;
 }
 
-.account-small{
-  display: none;
-}
-.account img{
-  margin-left: 0;
-   
-}
 .account *{
   vertical-align: middle;
 }
 .account hr{
   border-top: none;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px;  
+  margin-right: 20px;
   color: #6f6f6f;
 }
 
@@ -229,15 +233,27 @@ main{
   filter: invert(0.4);
 }
 
+/* Download Hover */
 .download:hover{
   color: white;
 }
 
 .download:hover img{
-  width: 20px;
   filter: invert(0);
 }
 
+
+/* Display None */
+.logo-small{
+  display: none;
+}
+.nav-menu-small{
+  display: none;
+}
+.account-small{
+  display: none;
+}
+/* END LEFT NAV */
 
 /* MAIN CONTENT */
 .main-content{
@@ -286,37 +302,26 @@ footer{
   .playlists{
     display: none;
   }
-
+  .new-playlist{
+    display: none;
+  }
   /* Left Nav Changing */
-  .logo-small img{
-    display: block;
-    width: 30px;
-    height: 30px;
-  }
-  .left-nav img{
-    margin-left: 0;
-  }
   .flex-center{
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     padding-top: 5px;
-    justify-content: center;  
+    align-content: flex-start;
+    align-items: center;  
+  }
+
+  .logo-small{
+    display: block;
   }
   .nav-menu-small{
-    width: 100%;
     display: block;
-    padding: 15px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .account-small{
-    width: 100%;
-    height: calc(100vh - 270px);
     display: block;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
   }
 
 }
