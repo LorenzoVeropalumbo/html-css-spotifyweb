@@ -25,6 +25,10 @@ ul{
   font-family: 'Montserrat', sans-serif;
 }
 
+.main-container{
+  padding: 20px;
+}
+
 /* Upper Banner */
 .upper-banner{
   background-color: rgba(9, 11, 17, 0.5);
@@ -59,6 +63,10 @@ ul{
 
 .padding-left{
   padding-left: 20px;
+}
+
+.padding-top{
+  padding-top: 10px;
 }
 
 .margin-left{
@@ -189,7 +197,6 @@ main{
 /* Plalist Items */
 .playlists{
   flex-grow: 3;
-  width: 100%;
   position: relative;
   z-index: 1;
   overflow-y: auto;
@@ -283,11 +290,12 @@ main{
   width: calc(100% - 250px);
   overflow-y: auto;
   padding-top: 80px;
+  color: white;
 }
 
 /* UL main */
 .ul-main{
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
@@ -317,6 +325,72 @@ main{
   width: 30%;
 }
 
+/* Main Content */
+.main-container h2{
+  padding-bottom: 20px;
+}
+
+/* Song Recently */
+.song-recently{
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow-y: none;
+  
+}
+
+.song-recently .song{
+  width: calc(100% / 6 - 5px);
+  padding: 0 5px;
+}
+
+.song img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.song-container{
+  position: relative;
+}
+
+.song h4{
+  text-align: center;
+  font-weight: 600;
+  color: #696b70;
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+.song h3{
+  padding: 20px 0 10px;
+  text-align: center;
+  font-size: 16px;
+}
+/* Hoverlay song */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: black;
+}
+
+.play-song{
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  opacity: 0;
+}
+.song-container:hover .overlay{
+  opacity: 0.5;
+}
+.song-container:hover .play-song{
+  opacity: 1;
+}
+
 /* FOOTER */
 footer{
   width: 100%;
@@ -330,6 +404,23 @@ footer{
 /*----------------------------------------------------------------------------------------------------------------- 
                                                   MEDIA 
 -------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:1100px){
+  .ul-main{
+    width: 74%;
+  }
+  .song-recently .song{
+    width: calc(100% / 4 - 5px);
+  }
+}
+
+@media screen and (max-width:700px){
+  .ul-main{
+    width: 95%;
+  }
+  .song-recently .song{
+    width: calc(100% / 2 - 5px);
+  }
+}
 @media screen and (max-width:600px) {
 
   /* Calc width */
@@ -382,6 +473,9 @@ footer{
   }
   .account-small{
     display: block;
+  }
+  .ul-main{
+    width: 100%;
   }
 
 }
