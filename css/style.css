@@ -29,6 +29,9 @@ ul{
   padding: 20px;
 }
 
+.footer-container{
+  padding: 10px;
+}
 /* Upper Banner */
 .upper-banner{
   background-color: rgba(9, 11, 17, 0.5);
@@ -120,6 +123,10 @@ main{
   width: 18px;
 }
 
+.img-mid{
+  width: 50px;
+}
+
 /* Logo */
 .logo-cont{
   width: 100%;
@@ -175,7 +182,7 @@ main{
   color: white;
   text-transform: uppercase;
   font-size: 16px;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 .adding-icon{
   color: #0c0c0c;
@@ -202,6 +209,7 @@ main{
   z-index: 1;
   overflow-y: auto;
   min-height: 70px;
+  padding-top: 7px;
 }
 .playlists *{
   vertical-align: middle;
@@ -386,10 +394,10 @@ main{
   left: 40%;
   opacity: 0;
 }
-.song-container:hover .overlay{
+.song:hover .overlay{
   opacity: 0.5;
 }
-.song-container:hover .play-song{
+.song:hover .play-song{
   opacity: 1;
 }
 
@@ -438,6 +446,52 @@ footer{
   background-color: #282828;
   position: relative;
   z-index: 50;
+}
+
+.player-brani{
+  align-items: center;
+  height: 100%;
+}
+
+.col{
+  width: calc(100% / 3);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+footer img{
+  margin-right: 10px;
+}
+.brano-desc h5{
+  margin-right: 50px;
+  color: white;
+}
+.brano-desc span{
+  color: white;
+  opacity: 0.5;
+  font-size: 12px;
+}
+.brano-desc span:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.brano-desc i{
+  padding: 5px;
+  opacity: 0.5;
+  color: white;
+}
+.brano-desc i:hover{
+  padding: 5px;
+  opacity: 1;
+}
+
+.song-bar{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
 }
 
 
