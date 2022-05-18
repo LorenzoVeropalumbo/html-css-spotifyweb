@@ -22,6 +22,8 @@ a{
   text-decoration: none;
   color: inherit;
 }
+
+
 /* GENERAL */
 .app-container{
   width: 100%;
@@ -38,6 +40,8 @@ a{
 .footer-container{
   padding: 10px;
 }
+
+
 /* Upper Banner */
 .upper-banner{
   background-color: rgba(9, 11, 17, 0.5);
@@ -71,12 +75,39 @@ a{
   display: flex;
 }
 
+.col{
+  display: flex;
+  height: 100%;
+}
+
+.col-align{
+  align-items: center;
+  justify-content: center;
+} 
+
+/* Width */
+.width100{
+  width: 100%;
+}
+.width40{
+  width: 40%;
+}
+
+.center-align{
+  align-items: center;
+}
+
+/* Paddings and Margin */
 .padding-left{
   padding-left: 20px;
 }
 
 .padding-top{
   padding-top: 10px;
+}
+
+.padding-right{
+  padding-right: 20px;
 }
 
 .margin-left{
@@ -96,6 +127,45 @@ a{
 
 .btn-upgrade:hover{
   transform: scale(1.2);
+}
+
+/* Hoverlay song */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: black;
+  overflow: hidden;
+}
+
+.overlay-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 20%;
+  opacity: 1;
+  background-color: #9a9a9a;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: 5;
+}
+
+.bar .pinter{
+  position: relative;
+  left: 19%;
+  bottom: 130%;
+  z-index: 6;
+  font-size: 0.9rem;
+  color: white;
+  display: none;
 }
 
 /* MAIN */
@@ -380,19 +450,6 @@ main{
   text-align: center;
   font-size: 16px;
 }
-/* Hoverlay song */
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background-color: black;
-  overflow: hidden;
-}
 
 .play-song{
   position: absolute;
@@ -461,11 +518,7 @@ footer{
   align-content: flex-end;
 }
 
-.col{
-  display: flex;
-  height: 100%;
-}
-
+/* Brani */
 .brano-desc h5{
   margin-right: 50px;
   color: white;
@@ -490,33 +543,65 @@ footer{
   opacity: 1;
 }
 
-.song-info{
-  align-items: center;
-}
-
+/* Song */
 .song-bar{
-  padding: 20px 0 10px;
+  padding-bottom: 10px;
   text-align: center;
   color: white;
 }
 .song-bar *{
   vertical-align: middle;
-  padding-left: 10px;
+  padding-left: 15px;
   
 }
+
+/* Bar */
 .bar{
   height: 5px;
-  width: 70%;
+  width: 100%;
+  background-color: #4d4d4d;
+  border-radius: 20px;
+  position: relative;
+}
+
+.bar:hover .overlay-bar{
   background-color: #a7f72d;
+}
+.bar:hover .pinter{
   display: inline-block;
 }
 
-.col-align{
-  flex-grow: 4;
+/* Volume */
+.volume-bar{
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-grow: 3;
-} 
+  justify-content: flex-end;
+}
+.volume-bar *{
+  padding: 0 0.5rem;
+}
+.volume-bar .bar{
+  width: 100px;
+}
+
+.volume-bar .overlay-bar{
+  width: 5%;
+}
+
+.volume-bar .pinter{
+  position: absolute;
+  bottom: 0;
+  top: -20%;
+  font-size: 0.6rem;
+  left: 0;
+}
+/* Hover Footer */
+.play-hover:hover{
+  transform: scale(1.2);
+}
 
 /*----------------------------------------------------------------------------------------------------------------- 
                                                   MEDIA 
@@ -595,9 +680,34 @@ footer{
     width: 100%;
   }
 
+  .volume-bar .bar{
+    width: 50px;
+  }
+
+  .player-brani .margin-left{
+    margin: 0;
+  }
+
+  .song-bar *{
+    padding: 0 2px;
+  }
+
+}
+
+@media screen and (max-width:590px) {
+  .player-brani img{
+    display: none;
+  }
 }
 
 /* COLOR */
 .color-gray{
   color: #5d5d5d;
+}
+
+.color-white-font{
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 1rem;
 }
