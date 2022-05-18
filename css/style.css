@@ -17,12 +17,18 @@ span{
 ul{
   list-style-type: none;
 }
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
 /* GENERAL */
 .app-container{
   width: 100%;
   height: 100vh;
   min-height: 250px;
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 .main-container{
@@ -317,7 +323,7 @@ main{
   padding: 20px 10px;
 }
 
-.ul-main li:hover{
+.ul-main li:hover a{
   color: white;
 }
 
@@ -451,18 +457,15 @@ footer{
 .player-brani{
   align-items: center;
   height: 100%;
+  justify-content: space-between;
+  align-content: flex-end;
 }
 
 .col{
-  width: calc(100% / 3);
   display: flex;
-  align-items: center;
   height: 100%;
 }
 
-footer img{
-  margin-right: 10px;
-}
 .brano-desc h5{
   margin-right: 50px;
   color: white;
@@ -487,13 +490,32 @@ footer img{
   opacity: 1;
 }
 
-.song-bar{
-  display: flex;
-  width: 50%;
-  height: 100%;
-  justify-content: center;
+.song-info{
+  align-items: center;
 }
 
+.song-bar{
+  padding: 20px 0 10px;
+}
+.song-bar *{
+  vertical-align: middle;
+  padding-left: 10px;
+}
+.bar{
+  height: 5px;
+  width: 550px;
+  background-color: #a7f72d;
+  display: inline-block;
+}
+
+.ss{
+  flex-grow: 4;
+  align-items: center;
+  justify-content: center;
+} 
+.aa{
+  text-align: middle;
+}
 
 /*----------------------------------------------------------------------------------------------------------------- 
                                                   MEDIA 
