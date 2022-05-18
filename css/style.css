@@ -496,10 +496,13 @@ footer{
 
 .song-bar{
   padding: 20px 0 10px;
+  text-align: center;
+  color: white;
 }
 .song-bar *{
   vertical-align: middle;
   padding-left: 10px;
+  
 }
 .bar{
   height: 5px;
@@ -513,9 +516,6 @@ footer{
   align-items: center;
   justify-content: center;
 } 
-.aa{
-  text-align: middle;
-}
 
 /*----------------------------------------------------------------------------------------------------------------- 
                                                   MEDIA 
