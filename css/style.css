@@ -506,12 +506,12 @@ footer{
 }
 .bar{
   height: 5px;
-  width: 550px;
+  width: 70%;
   background-color: #a7f72d;
   display: inline-block;
 }
 
-.ss{
+.col-align{
   flex-grow: 4;
   align-items: center;
   justify-content: center;
